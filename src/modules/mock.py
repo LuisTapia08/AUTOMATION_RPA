@@ -1,0 +1,18 @@
+mockuser = {
+    "Name": "Luis Tapia",
+    "Email": "luisin@gmail.com",
+    "password": "123456789",
+    "birthday": "8",
+    "birthmonth": "June",
+    "birthyear": "1998",
+    "Singin": True,
+    "Receive": False,
+    "First Name": "Luis",
+    "Last Name": "Tapia",
+    "Address": "Rua Oscarito, 41, Aleixo",
+    "Country": "Canada",
+    "State": "Quebe",
+    "City": "Manaus",
+    "Zipcode": "69060260",
+    "phone": "92984810126"
+}
