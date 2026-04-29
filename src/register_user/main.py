@@ -1,15 +1,12 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 from src.shared import functions
-from src.constants.url import URL
-
+from selenium.common.exceptions import TimeoutException
 
 class User:
     def __init__(self):
-        self.driver, self.wait = functions.iniciar_driver(URL)
-
+        self.driver, self.wait = functions.iniciar_driver()
     def ir_para_login(self):
         login_link = self.wait.until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[href="/login"]'))
@@ -80,5 +77,13 @@ class User:
         )
         continue_link.click()
         print('O botão foi clicado')
-
         
+    def fechar_ads(self, wait):
+        try:
+            close_btn = wait.until(
+                EC.element_to_be_clickable((By.XPATH, "//*[text()[contains(., 'Close')]]"))
+            )
+            close_btn.click()
+            print("Ad fechado")
+        except TimeoutException:
+            print("Nenhum ad apareceu")

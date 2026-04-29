@@ -1,0 +1,5 @@
+CARDS = ".product-image-wrapper"
+NAME = ".productinfo p"
+PRICE = ".productinfo h2"
+ADD_BUTTON = "a.add-to-cart"
+LINK = ".choose a"

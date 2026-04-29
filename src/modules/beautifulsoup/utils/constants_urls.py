@@ -1,0 +1,1 @@
+BASE = "https://automationexercise.com"

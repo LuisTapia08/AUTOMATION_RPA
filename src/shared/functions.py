@@ -2,9 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
+from src.modules.beautifulsoup.utils.constants_urls import BASE
 
 
-def iniciar_driver(url):
+def iniciar_driver():
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
 
@@ -18,7 +19,7 @@ def iniciar_driver(url):
     options.add_experimental_option("prefs", prefs)
 
     driver = webdriver.Chrome(options=options)
-    driver.get(url)
+    driver.get(BASE)
     wait = WebDriverWait(driver, 10)
 
     return driver, wait
